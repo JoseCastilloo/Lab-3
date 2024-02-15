@@ -21,20 +21,14 @@ var currentItem ="";
 
 function addItem(item)
 {
-    currentItem +=item;
-    updatecart();
-}
-
-function updatecart()
-{
-    document.getElementById('Hlabel').innerHTML = "<br>" + currentItem;
-
+    currentItem += '<br>'+ item;
+    document.getElementById('addedItem').innerHTML =currentItem;
 }
 
 function createItem()
 {
-    var createdItem = document.getElementById('Slabel');
-    createdItem.innerHTML += currentItem + "<br>";
+    var listedItem = document.getElementById('productsLabel');
+    listedItem.innerHTML += currentItem;
     currentItem="";
-    updatecart();
+    addItem();
 }
